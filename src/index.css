@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.element {
+  padding: 0px 100px 0px 100px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100px;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+/* Slider Container */
+.slider-container {
+  width: 100%; /* Set the width of the slider container */
+}
+
+/* Individual Slide */
+.slick-slide {
+  padding: 0 8px; /* Adjust slide padding as needed */
+}
+
+/* Dots Navigation */
+.slick-dots {
+  position: absolute;
+  bottom: 20px; /* Adjust the position of the dots */
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.slick-dots li {
+  margin: 0 4px; /* Adjust the spacing between dots */
+}
+
+.slick-dots li button {
+  font-size: 10px; /* Adjust dot size */
+  color: #fff; /* Change dot color */
+  background-color: #999; /* Change dot background color */
+  border: none;
+  width: 10px; /* Adjust dot width */
+  height: 10px; /* Adjust dot height */
+  border-radius: 50%; /* Make dots circular */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #333; /* Change active dot color */
+}
