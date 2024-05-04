@@ -12,13 +12,15 @@ import AboutUs from "../About/AboutUs";
 import News from "./News";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Featured from "./Featured";
 
 // import Review from "./Review";
 
 const Home = () => {
   return (
     <>
-      <AboutUs />
+      {/* <AboutUs /> */}
+      {/* <Featured /> */}
       <Navbar />
       <div className="">
         <section className="h-96 w-full flex px-[100px] pt-7 gap-3 bg-orange-50">
