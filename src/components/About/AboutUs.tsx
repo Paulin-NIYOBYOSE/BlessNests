@@ -2,7 +2,6 @@ import React from "react";
 // import Navbar from "../Home/Navbar";
 import Footer from "../Home/Footer";
 import Statistics from "../Home/Statistics";
-import Navbar from "../Home/Navbar";
 
 const AboutUs = () => {
   return (

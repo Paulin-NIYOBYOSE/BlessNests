@@ -10,20 +10,18 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
-/* Slider Container */
+
 .slider-container {
-  width: 100%; /* Set the width of the slider container */
+  width: 100%;
 }
 
-/* Individual Slide */
 .slick-slide {
-  padding: 0 8px; /* Adjust slide padding as needed */
+  padding: 0 8px;
 }
 
-/* Dots Navigation */
 .slick-dots {
   position: absolute;
-  bottom: 20px; /* Adjust the position of the dots */
+  bottom: 20px;
   width: 100%;
   list-style: none;
   display: flex;
@@ -32,21 +30,21 @@
 }
 
 .slick-dots li {
-  margin: 0 4px; /* Adjust the spacing between dots */
+  margin: 0 4px;
 }
 
 .slick-dots li button {
-  font-size: 10px; /* Adjust dot size */
-  color: #fff; /* Change dot color */
-  background-color: #999; /* Change dot background color */
+  font-size: 10px;
+  color: #fff;
+  background-color: #999;
   border: none;
-  width: 10px; /* Adjust dot width */
-  height: 10px; /* Adjust dot height */
-  border-radius: 50%; /* Make dots circular */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .slick-dots li.slick-active button {
-  background-color: #333; /* Change active dot color */
+  background-color: #333;
 }

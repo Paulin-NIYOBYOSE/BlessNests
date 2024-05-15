@@ -23,7 +23,7 @@ const Home = () => {
       {/* <Featured /> */}
       <Navbar />
       <div className="">
-        <section className="h-96 w-full flex px-[100px] pt-7 gap-3 bg-orange-50">
+        <section className="h-96 w-full flex md:px-[100px] pt-7 gap-3 bg-orange-50">
           <div className="w-1/2 h-full ">
             <h3 className="text-4xl font-bold">
               Find a perfect property <br />
@@ -133,7 +133,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <Statistics />
+        {/* <Statistics /> */}
 
         <section>{/* <Featured /> */}</section>
 
@@ -213,8 +213,8 @@ const Home = () => {
 
         <section>{/* <Review /> */}</section>
       </div>
-      <News />
-      <Footer />
+      {/* <News /> */}
+      {/* <Footer /> */}
     </>
   );
 };

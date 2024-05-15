@@ -1,6 +1,5 @@
 import React from "react";
 import { FaHome } from "react-icons/fa";
-import { FaAngleDown } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import Modal from "react-modal";
 import { IoCloseCircle } from "react-icons/io5";
@@ -10,7 +9,7 @@ import { useState } from "react";
 import { IoEyeOff } from "react-icons/io5";
 import { IoEye } from "react-icons/io5";
 import { Link } from "react-router-dom";
-
+import { CiMenuFries } from "react-icons/ci";
 Modal.setAppElement("#root");
 
 const Navbar = () => {
@@ -29,51 +28,61 @@ const Navbar = () => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword); // Toggle the state between true and false
   };
+
   return (
     <>
-      <nav className="element flex gap-24 font-semibold  top-0 sticky bg-white h-[4rem]">
-        <div className="text-orange-500 flex items-center justify-center ">
-          <FaHome className="h-10 w-12" />
-          BlessNests
-        </div>
-        <div className="flex items-center justify-center ">
-          <ul className="flex gap-7 items-center justify-center">
-            <a className="flex" href="">
-              Home
-              {/* <FaAngleDown className="mt-2" /> */}
-            </a>
-            <a className="flex" href="">
-              Listing
-              {/* <FaAngleDown className="mt-2" /> */}
-            </a>
-            <a className="flex " href="">
-              Agents
-              {/* <FaAngleDown className="mt-2" /> */}
-            </a>
-            <a className="" href="">
-              Property
-            </a>
-            <a className="" href="">
-              Blog
-            </a>
-          </ul>
-        </div>
-        <div className="flex gap-3 items-center justify-center">
-          <div className="flex items-center justify-center ">
-            <CiSearch className="h-6 w-9" />
-            <input
-              className=" h-8 w-32 focus:outline  focus:border-red-300 rounded"
-              type="text"
-              placeholder="Search"
-            />
+      <nav className="">
+        {/* Mobile nav */}
+        <div className="flex items-center justify-between ">
+          <div className="text-orange-500 flex items-center justify-center ">
+            <FaHome className="h-10 w-12" />
+            BlessNests
           </div>
-          <button
-            className="flex items-center justify-center bg-gray-800 text-white w-28 h-8 border-none rounded-lg"
-            onClick={openModal}
-          >
-            Log in
-          </button>
+          <div>
+            <CiMenuFries />
+          </div>
         </div>
+        {/* Desktop view */}
+        <div className="hidden element md:flex gap-24 font-semibold  top-0 sticky bg-white h-[4rem] w-full">
+          <div className="text-orange-500 flex items-center justify-center ">
+            <FaHome className="h-10 w-12" />
+            BlessNests
+          </div>
+          <div className=" hidden md:flex items-center justify-center ">
+            <ul className="flex gap-7 items-center justify-center">
+              <a className="flex" href="#">
+                Home
+              </a>
+              <a className="flex" href="">
+                Listing
+              </a>
+              <a href="">Agent</a>
+              <a className="" href="">
+                Property
+              </a>
+              <a className="" href="">
+                Blog
+              </a>
+            </ul>
+          </div>
+          <div className="flex gap-3 items-center justify-center">
+            <div className="flex items-center justify-center ">
+              <CiSearch className="h-6 w-9" />
+              <input
+                className=" h-8 w-32 focus:outline  focus:border-red-300 rounded"
+                type="text"
+                placeholder="Search"
+              />
+            </div>
+            <button
+              className="flex items-center justify-center bg-gray-800 text-white w-28 h-8 border-none rounded-lg"
+              onClick={openModal}
+            >
+              Log in
+            </button>
+          </div>
+        </div>
+
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
